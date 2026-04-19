@@ -1,0 +1,18 @@
+Style/RedundantCurrentDirectoryInPath:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: true
+  EnforcedStyle: percent_r
+
+Style/RescueStandardError:
+  Enabled: true
+  EnforcedStyle: explicit
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes

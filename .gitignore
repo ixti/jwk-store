@@ -1,0 +1,14 @@
+*.gem
+
+/.bundle/
+/.mutant/
+/.ruby-version
+/Gemfile.lock
+
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/

@@ -1,0 +1,43 @@
+Metrics/AbcSize:
+  Exclude:
+    - "test/**/*.rb"
+
+Metrics/BlockLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+    - method_call
+  Exclude:
+    - "test/**/*.rb"
+    - "*.gemspec"
+
+Metrics/ClassLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+    - method_call
+  Exclude:
+    - "test/**/*.rb"
+
+Metrics/MethodLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+    - method_call
+  Exclude:
+    - "test/**/*.rb"
+
+Metrics/ModuleLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+    - method_call
+  Exclude:
+    - "test/**/*.rb"
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false

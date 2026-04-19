@@ -1,0 +1,18 @@
+usage: opensource
+
+environment_variables:
+  MUTANT: "true"
+
+integration:
+  name: minitest
+
+includes:
+  - lib
+  - test
+
+requires:
+  - jwk-store
+
+mutation:
+  operators: full
+  timeout: 10.0

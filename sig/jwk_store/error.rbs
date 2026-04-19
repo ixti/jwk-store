@@ -1,0 +1,4 @@
+class JWKStore
+  class Error < StandardError
+  end
+end

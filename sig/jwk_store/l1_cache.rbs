@@ -1,0 +1,38 @@
+class JWKStore
+  class L1Cache[T]
+    DEFAULT_CLOCK: ^() -> Float
+    DEFAULT_REFRESH_INTERVAL: Numeric
+    DEFAULT_FAILED_REFRESH_COOLDOWN: Numeric
+
+    attr_reader refresh_interval: Numeric
+    attr_reader failed_refresh_cooldown: Numeric
+    attr_reader value: T?
+
+    def initialize: (
+      refresher: ^(force: bool) -> T?,
+      ?clock: ^() -> Float,
+      ?refresh_interval: Numeric,
+      ?failed_refresh_cooldown: Numeric
+    ) -> void
+
+    @refresh_interval: Numeric
+    @failed_refresh_cooldown: Numeric
+    @value: T?
+    @no_value: bool
+    @refresher: ^(force: bool) -> T?
+    @refresh_after: Float
+    @refresh_attempted_at: Float
+    @mutex: Mutex
+
+    def fetch: (?force: bool) -> T?
+
+    private
+
+    def current_time: () -> Float
+    def expired?: () -> bool
+    def hard_refresh: (force: bool) -> bool
+    def soft_refresh: (force: bool) -> bool
+    def refresh: (force: bool) -> void
+    def valid_interval?: (untyped) -> bool
+  end
+end

@@ -1,0 +1,8 @@
+module JWT
+  module JWK
+    class KeyBase
+    end
+
+    def self.create_from: (untyped) -> JWT::JWK::KeyBase
+  end
+end

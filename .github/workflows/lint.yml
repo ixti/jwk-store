@@ -1,0 +1,39 @@
+name: Lint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  BUNDLE_WITHOUT: "development"
+
+jobs:
+  rubocop:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ruby-3.3
+          bundler-cache: true
+
+      - name: Rubocop
+        run: bin/rubocop --format progress --color
+
+  steep:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version:  ruby-3.3
+          bundler-cache: true
+
+      - name: Steep
+        run: bin/rake steep
